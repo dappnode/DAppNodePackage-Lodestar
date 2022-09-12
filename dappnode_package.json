@@ -1,15 +1,16 @@
 {
-  "name": "lodestar-chiado.dnp.dappnode.eth",
+  "name": "lodestar.dnp.dappnode.eth",
   "version": "1.0.0",
   "upstreamVersion": "v1.0.0",
   "architectures": ["linux/amd64"],
   "upstreamRepo": "ChainSafe/lodestar",
-  "shortDescription": "lodestar-chiado.dnp.dappnode.eth description",
-  "description": "lodestar-chiado.dnp.dappnode.eth description",
+  "shortDescription": "lodestar.dnp.dappnode.eth description",
+  "description": "lodestar.dnp.dappnode.eth description",
   "type": "service",
   "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
   "contributors": [
-    "tropicar <tropicar@dappnode.io> (https://github.com/tropicar)"
+    "tropicar <tropicar@dappnode.io> (https://github.com/tropicar)",
+    "Nabsku <thenabsku@gmail.com> (https://github.com/nabsku)"
   ],
   "categories": ["Blockchain", "ETH2.0"],
   "repository": {
@@ -20,8 +21,8 @@
     "url": "https://github.com/ChainSafe/lodestar/issues"
   },
   "links": {
-    "ui": "http://ui.web3signer-chiado.dappnode?signer_url=http://web3signer.web3signer-chiado.dappnode:9000",
-    "homepage": "https://github.com/dappnode/DAppNodePackage-lodestar-chiado#readme",
+    "ui": "http://ui.web3signer.dappnode?signer_url=http://web3signer.web3signer.dappnode:9000",
+    "homepage": "https://github.com/dappnode/DAppNodePackage-lodestar#readme",
     "readme": "https://github.com/ChainSafe/lodestar#lodestar-ethereum-consensus-implementation",
     "docs": "https://chainsafe.github.io/lodestar/"
   },
