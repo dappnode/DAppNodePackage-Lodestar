@@ -9,7 +9,6 @@ exec node /usr/app/node_modules/.bin/lodestar \
     --keymanager.port 3500 \
     --keymanager.address 0.0.0.0 \
     --externalSigner.url=${HTTP_WEB3SIGNER} \
-    --externalSigner.fetch true \
     --doppelgangerProtectionEnabled \
     --server=${BEACON_NODE_ADDR} \
     --logLevel=${DEBUG_LEVEL} \
