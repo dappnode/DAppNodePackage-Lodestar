@@ -17,7 +17,7 @@ fields:
     title: Execution Client endpoint
     required: true
     description: >-
-      The consensus clients (Lighthouse, Lodestar, and Teku) require access to an execution client to receive the execution payload by using the Engine API of the execution client. This endpoint MUST be provided for an execution client which you must also run locally. YOU CANNOT CONTINUE TO USE INFURA OR ANY OTHER REMOTE SERVICE PROVIDER.
+      The consensus clients (Lighthouse, Lodestar, Nimbus, Prysm, and Teku) require access to an execution client to receive the execution payload by using the Engine API of the execution client. This endpoint MUST be provided for an execution client which you must also run locally. YOU CANNOT CONTINUE TO USE INFURA OR ANY OTHER REMOTE SERVICE PROVIDER.
       - Nethermind Chiado `http://chiado-nnethermind.dappnode:8551` - [Install link](http://my.dappnode/#/installer/chiado-nethermind.dnp.dappnode.eth)
   - id: feeRecipientAddress
     target:
