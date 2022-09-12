@@ -9,8 +9,8 @@ services:
     volumes:
       - "beacon-data:/var/lib/data"
     ports:
-      - "19062:19062/tcp"
-      - "19062:19062/udp"
+      - "9125:9125/tcp"
+      - "9125:9125/udp"
     restart: unless-stopped
     security_opt:
       - "seccomp:unconfined"
@@ -20,7 +20,7 @@ services:
       HTTP_ENGINE: ""
       CORSDOMAIN: "http://lodestar.dappnode"
       CHECKPOINT_SYNC_URL: ""
-      P2P_PORT: 19062
+      P2P_PORT: 9125
       EXTRA_OPTS: ""
       CONFIG_MODE: basic
   validator:
