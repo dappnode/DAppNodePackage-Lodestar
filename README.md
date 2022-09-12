@@ -1,1 +1,1 @@
-# DAppNodePackage-lodestar-chiado
+# DAppNodePackage Lodestar
