@@ -1,0 +1,32 @@
+version: "2"
+fields:
+  - id: GRAFFITI
+    target:
+      type: environment
+      name: GRAFFITI
+      service: validator
+    title: Graffiti
+    maxLength: 32
+    description: >-
+      Add a string to your proposed blocks, which will be seen on the block explorer
+  - id: HTTP_ENGINE
+    target:
+      type: environment
+      name: HTTP_ENGINE
+      service: beacon-chain
+    title: Execution Client endpoint
+    required: true
+    description: >-
+      The consensus clients (Lighthouse, Lodestar, and Teku) require access to an execution client to receive the execution payload by using the Engine API of the execution client. This endpoint MUST be provided for an execution client which you must also run locally. YOU CANNOT CONTINUE TO USE INFURA OR ANY OTHER REMOTE SERVICE PROVIDER.
+      - Nethermind Chiado `http://chiado-nnethermind.dappnode:8551` - [Install link](http://my.dappnode/#/installer/chiado-nethermind.dnp.dappnode.eth)
+  - id: feeRecipientAddress
+    target:
+      type: environment
+      name: FEE_RECIPIENT_ADDRESS
+      service: validator
+    title: Fee Recipient Address
+    description: >-
+      Fee Recipient is a feature that lets you specify a priority fee recipient address on your validator client instance and beacon node. After The Merge, execution clients will begin depositing priority fees into this address whenever your validator client proposes a new block.
+    required: true
+    pattern: "^0x[a-fA-F0-9]{40}$"
+    patternErrorMessage: Must be a valid address (0x1fd16a...)

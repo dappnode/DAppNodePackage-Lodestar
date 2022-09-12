@@ -1,0 +1,42 @@
+version: "3.5"
+services:
+  beacon-chain:
+    image: "beacon-chain.lodestar-chiado.dnp.dappnode.eth:1.0.0"
+    build:
+      context: beacon-chain
+      args:
+        UPSTREAM_VERSION: v1.0.0
+    volumes:
+      - "beacon-data:/root/.lodestar"
+    ports:
+      - "19062:19062/tcp"
+      - "19062:19062/udp"
+    restart: unless-stopped
+    security_opt:
+      - "seccomp:unconfined"
+    environment:
+      DEBUG_LEVEL: info
+      BEACON_API_PORT: 3500
+      HTTP_PROVIDER: "http://chiado-nethermind.dappnode:8545"
+      HTTP_ENGINE: "http://chiado-nethermind.dappnode:8551"
+      CORSDOMAIN: "http://lodestar.dappnode"
+      P2P_PORT: 19062
+      EXTRA_OPTS: ""
+  validator:
+    image: "validator.lodestar-chiado.dnp.dappnode.eth:1.0.0"
+    build:
+      context: validator
+      args:
+        UPSTREAM_VERSION: v1.0.0
+    restart: unless-stopped
+    security_opt:
+      - "seccomp:unconfined"
+    environment:
+      DEBUG_LEVEL: info
+      HTTP_WEB3SIGNER: "http://web3signer.web3signer-chiado.dappnode:9000"
+      BEACON_NODE_ADDR: "http://beacon-chain.lodestar-chiado.dappnode:3500"
+      GRAFFITI: validating_from_DAppNode
+      EXTRA_OPTS: ""
+      FEE_RECIPIENT_ADDRESS: ""
+volumes:
+  beacon-data: {}
