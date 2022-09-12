@@ -5,8 +5,11 @@ exec node /usr/app/node_modules/.bin/lodestar \
     --network=mainnet \
     --suggestedFeeRecipient=${FEE_RECIPIENT_ADDRESS} \
     --graffiti=${GRAFFITI} \
+    --keymanager true \
+    --keymanager.port 3500 \
+    --keymanager.address 0.0.0.0 \
     --externalSigner.url=${HTTP_WEB3SIGNER} \
-    --externalSigner.fetch \
+    --externalSigner.fetch true \
     --doppelgangerProtectionEnabled \
     --server=${BEACON_NODE_ADDR} \
     --logLevel=${DEBUG_LEVEL} \
