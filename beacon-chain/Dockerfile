@@ -2,8 +2,8 @@ ARG UPSTREAM_VERSION
 FROM chainsafe/lodestar:${UPSTREAM_VERSION}
 
 COPY jwtsecret.hex /jwtsecret
-COPY entrypoint.sh /tmp/entrypoint.sh
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
-RUN chmod +x /tmp/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
 
-ENTRYPOINT ["sh", "-c", "/tmp/entrypoint.sh"]
+ENTRYPOINT ["sh", "-c", "/usr/local/bin/entrypoint.sh"]
