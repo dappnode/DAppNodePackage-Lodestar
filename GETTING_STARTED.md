@@ -1,4 +1,4 @@
-## Welcome to the Merge Ready Consensus Client: Teku
+## Welcome to the Merge Ready Consensus Client: Lodestar
 
 - Your keystores should now managed in the [Web3Signer-UI](http://ui.web3signer.dappnode?signer_url=http://web3signer.web3signer.dappnode:9000) 
 - Don't have the Web3signer installed yet? You may not have migrated to the Mainnet-Multiclient, which is necessary for the Merge. It can be manually installed [here](http://my.dappnode/#/installer/web3signer.dnp.dappnode.eth)
