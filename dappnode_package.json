@@ -2,7 +2,7 @@
   "name": "lodestar.dnp.dappnode.eth",
   "version": "1.0.0",
   "upstreamVersion": "v1.0.0",
-  "architectures": ["linux/amd64"],
+  "architectures": ["linux/amd64", "linux/arm64"],
   "upstreamRepo": "ChainSafe/lodestar",
   "shortDescription": "Typescript Ethereum Consensus Layer Implementation by ChainsSafe",
   "description": "Typescript Ethereum Consensus Layer Implementation by ChainsSafe",
