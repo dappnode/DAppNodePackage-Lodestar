@@ -1,16 +1,18 @@
-#!/bin/bash
+#!/bin/sh
 
 exec node /usr/app/node_modules/.bin/lodestar \
     validator \
-    --preset=gnosis \
-    --paramsFile=/usr/config.yaml \
-    --defaultFeeRecipient ${FEE_RECIPIENT} \
-    --graffiti ${GRAFFITI} \
-    --rootDir /var/lib/data \
-    --keymanagerEnabled \
-    --server http://beacon-chain.lodestar-chiado.dappnode:4000 \
-    --logLevelFile debug \
+    --network=mainnet \
+    --suggestedFeeRecipient=${FEE_RECIPIENT_ADDRESS} \
+    --graffiti=${GRAFFITI} \
+    --keymanager true \
+    --keymanager.authEnabled false \
+    --keymanager.port 3500 \
+    --keymanager.address 0.0.0.0 \
+    --externalSigner.url=${HTTP_WEB3SIGNER} \
+    --doppelgangerProtectionEnabled \
+    --server=${BEACON_NODE_ADDR} \
+    --logLevel=${DEBUG_LEVEL} \
+    --logFileLevel=${DEBUG_LEVEL} \
     --logFile /var/lib/data/validator.log \
-    --logRotate \
-    --logMaxFiles 5 \
     $EXTRA_OPTS
