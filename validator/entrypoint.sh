@@ -4,7 +4,7 @@ exec node /usr/app/node_modules/.bin/lodestar \
     validator \
     --network=mainnet \
     --suggestedFeeRecipient=${FEE_RECIPIENT_ADDRESS} \
-    --graffiti=${GRAFFITI} \
+    --graffiti=${GRAFFITI:0:32} \
     --keymanager true \
     --keymanager.authEnabled false \
     --keymanager.port 3500 \
