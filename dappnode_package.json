@@ -27,7 +27,7 @@
     "readme": "https://github.com/ChainSafe/lodestar#lodestar-ethereum-consensus-implementation",
     "docs": "https://chainsafe.github.io/lodestar/"
   },
-  "license": "GPL-3.0",
+  "license": "LGPL-3.0",
   "chain": {
     "driver": "ethereum-beacon-chain",
     "serviceName": "beacon-chain",
