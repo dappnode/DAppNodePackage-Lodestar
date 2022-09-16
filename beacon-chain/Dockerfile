@@ -1,5 +1,5 @@
 ARG UPSTREAM_VERSION
-FROM chainsafe/lodestar:${UPSTREAM_VERSION}
+FROM chainsafe/lodestar:next
 
 COPY jwtsecret.hex /jwtsecret
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh

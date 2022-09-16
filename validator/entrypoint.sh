@@ -10,9 +10,9 @@ exec node /usr/app/node_modules/.bin/lodestar \
     --keymanager.port 3500 \
     --keymanager.address 0.0.0.0 \
     --externalSigner.url=${HTTP_WEB3SIGNER} \
-    --doppelgangerProtectionEnabled \
     --server=${BEACON_NODE_ADDR} \
     --logLevel=${DEBUG_LEVEL} \
-    --logFileLevel=${DEBUG_LEVEL} \
+    --logFileLevel=debug \
+    --logFileDailyRotate 5 \
     --logFile /var/lib/data/validator.log \
     $EXTRA_OPTS

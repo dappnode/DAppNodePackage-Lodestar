@@ -12,6 +12,6 @@ exec node /usr/app/node_modules/.bin/lodestar \
     --rest.port ${BEACON_API_PORT} \
     --port $P2P_PORT \
     --logFile /var/lib/data/beacon.log \
-    --logFileLevel ${DEBUG_LEVEL} \
+    --logFileLevel debug \
     --logFileDailyRotate 5 \
     $EXTRA_OPTS
