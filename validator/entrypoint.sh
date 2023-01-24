@@ -12,7 +12,7 @@ exec node /usr/app/node_modules/.bin/lodestar \
     --keymanager.address 0.0.0.0 \
     --externalSigner.url=${HTTP_WEB3SIGNER} \
     --doppelgangerProtectionEnabled \
-    --server=${BEACON_NODE_ADDR} \
+    --beaconNodes=${BEACON_NODE_ADDR} \
     --logLevel=${DEBUG_LEVEL} \
     --logFileLevel=${DEBUG_LEVEL} \
     --logFile /var/lib/data/validator.log \
