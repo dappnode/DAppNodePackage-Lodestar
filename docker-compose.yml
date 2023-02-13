@@ -22,6 +22,7 @@ services:
       CHECKPOINT_SYNC_URL: ""
       P2P_PORT: 9112
       EXTRA_OPTS: ""
+      FEE_RECIPIENT_ADDRESS: ""
       CONFIG_MODE: basic
   validator:
     image: "validator.lodestar.dnp.dappnode.eth:1.0.0"
