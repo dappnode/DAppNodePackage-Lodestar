@@ -5,7 +5,7 @@ services:
     build:
       context: beacon-chain
       args:
-        UPSTREAM_VERSION: v1.3.0
+        UPSTREAM_VERSION: v1.4.3
     volumes:
       - "beacon-data:/var/lib/data"
     ports:
@@ -22,13 +22,14 @@ services:
       CHECKPOINT_SYNC_URL: ""
       P2P_PORT: 9112
       EXTRA_OPTS: ""
+      FEE_RECIPIENT_ADDRESS: ""
       CONFIG_MODE: basic
   validator:
     image: "validator.lodestar.dnp.dappnode.eth:1.0.0"
     build:
       context: validator
       args:
-        UPSTREAM_VERSION: v1.3.0
+        UPSTREAM_VERSION: v1.4.3
     restart: unless-stopped
     security_opt:
       - "seccomp:unconfined"
