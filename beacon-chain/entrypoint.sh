@@ -3,7 +3,7 @@
 
 # MEVBOOST: https://chainsafe.github.io/lodestar/usage/mev-integration/
 if [ -n "$_DAPPNODE_GLOBAL_MEVBOOST_MAINNET" ] && [ "$_DAPPNODE_GLOBAL_MEVBOOST_MAINNET" == "true" ]; then
-    echo "MEVBOOST is enabled"
+    echo "MEV-Boost is enabled"
     MEVBOOST_URL="http://mev-boost.mev-boost.dappnode:18550"
     EXTRA_OPTS="${EXTRA_OPTS} --builder --builder.urls=${MEVBOOST_URL}"
 fi
