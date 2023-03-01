@@ -41,19 +41,23 @@ Some Internet plans will charge an additional amount for any excess upload bandw
 
 One of the most contentious issues in Ethereum at the moment is related to a new technology known as Proposer-Builder Separation (PBS). So far, the primary implementation of this protocol is highly centralized to a single program called MEV-Boost, which is developed by Flashbots.  This technology is designed to try to increase rewards for block proposers by finding the (MEV) Maximal Extractable Value. It is the profit a block proposer (miner or validator) can make through their ability to arbitrarily include, exclude, or re-order transactions from the blocks they propose.  MEV-Boost accomplishes this by outsourcing the block building/transaction bundling duties of the validator to an external specialized builder running a builder relay(s).  There are many builder relays availible from several different sources. The main differences between builder relays are primarily how they bundle these transactions, however the more important difference is whether or not the relay censors any transactions, by not includidng them in the block, regardless of the fee or tip the transaction is paying to be included in the block.  This censorship is a legal and regulatory quandary that goes against the very ideological nature of Ethereum as a censorship resistent, free, open, and permissionless financial ecosystem.  
 
-The censorship at the crux of this quandary is related to the Office of Foreign Asset Control (OFAC) which is one of the enforcement arms of the United States Treasury Department.  OFAC has wide authority over financial transactions and is charged with monitoring and enforcing US financial sanctions against certain countries, organizations, and individuals.  Penalties are strong for OFAC violations and the reach of OFAC extends far beyond US borders; according to OFAC's October 2021 "Sanctions Compliance Guidance for the Virtual Currency Industry", when asked "Who Must Comply with OFAC Sanctions?" the response is as follows: "All U.S. persons are required to comply with OFAC regulations. This includes all U.S. citizens and lawful permanent residents,
+The censorship at the crux of this quandary is related to the Office of Foreign Asset Control (OFAC) which is one of the enforcement arms of the United States Treasury Department.  OFAC has wide authority over financial transactions and is charged with monitoring and enforcing US financial sanctions against certain countries, organizations, and individuals.  Penalties are strong for OFAC violations and the reach of OFAC extends far beyond US borders; according to OFAC's October 2021 "Sanctions Compliance Guidance for the Virtual Currency Industry", when asked "Who Must Comply with OFAC Sanctions?" the response is as follows:
+"All U.S. persons are required to comply with OFAC regulations. This includes all U.S. citizens and lawful permanent residents,
 wherever located; all individuals and entities within the United States; and all entities organized under the laws of the United States or
 any jurisdiction within the United States, including any foreign branches of those entities. Accordingly, anyone engaging in virtual currency
 activities in the United States, or that involve U.S. individuals or entities, should be aware of OFAC sanctions requirements and the
 circumstances in which they must comply with those requirements.
+
 Depending on the authorities governing each sanctions program, others may also be required to adhere to OFAC sanctions requirements.
 For example, OFAC’s Cuba, Iran, and North Korea sanctions programs extend sanctions prohibitions to certain foreign entities owned or
 controlled by U.S. persons or U.S. financial institutions. Certain activities by non-U.S. persons that involve the United States, U.S. persons,
 or goods or services exported from the United States may also be subject to OFAC sanctions regulations.
+
 Additionally, in most sanctions programs, any transaction that causes a violation — including a transaction by a non-U.S. person that causes
 a U.S. person to violate sanctions — is also prohibited. For certain sanctions programs, U.S. persons, wherever located, also are prohibited
 from facilitating actions on behalf of non-U.S. persons if the activity would be prohibited by sanctions regulations if directly performed by a
 U.S. person or within the United States.
+
 **Strict Liability Regulations**
 OFAC may impose civil penalties for sanctions violations generally based on a strict liability legal standard. This means that, in many cases,
 a U.S. person may be held civilly liable for sanctions violations even without having knowledge or reason to know it was engaging in such
