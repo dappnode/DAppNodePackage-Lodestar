@@ -17,7 +17,6 @@ services:
     environment:
       DEBUG_LEVEL: info
       BEACON_API_PORT: 3500
-      CORSDOMAIN: "http://lodestar.dappnode"
       CHECKPOINT_SYNC_URL: ""
       P2P_PORT: 9112
       EXTRA_OPTS: ""
