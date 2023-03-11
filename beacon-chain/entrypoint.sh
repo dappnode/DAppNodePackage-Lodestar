@@ -1,7 +1,9 @@
+#!/bin/sh
+
 # Concatenate EXTRA_OPTS string
 [[ -n "$CHECKPOINT_SYNC_URL" ]] && EXTRA_OPTS="${EXTRA_OPTS} --checkpointSyncUrl=${CHECKPOINT_SYNC_URL}"
 
-# MEVBOOST: https://chainsafe.github.io/lodestar/usage/mev-integration/
+# MEV-Boost: https://chainsafe.github.io/lodestar/usage/mev-integration/
 if [ -n "$_DAPPNODE_GLOBAL_MEVBOOST_MAINNET" ] && [ "$_DAPPNODE_GLOBAL_MEVBOOST_MAINNET" == "true" ]; then
     echo "MEV-Boost is enabled"
     MEVBOOST_URL="http://mev-boost.mev-boost.dappnode:18550"
@@ -23,6 +25,7 @@ exec node /usr/app/node_modules/.bin/lodestar \
     --metrics.port 8008 \
     --metrics.address 0.0.0.0 \
     --logFile /var/lib/data/beacon.log \
+    --logLevel ${DEBUG_LEVEL} \
     --logFileLevel ${DEBUG_LEVEL} \
     --logFileDailyRotate 5 \
     $EXTRA_OPTS
