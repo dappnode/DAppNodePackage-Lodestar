@@ -39,7 +39,7 @@
   },
   "globalEnvs": [
     {
-      "envs": ["MEVBOOST_MAINNET"],
+      "envs": ["EXECUTION_CLIENT_MAINNET", "MEVBOOST_MAINNET"],
       "services": ["beacon-chain"]
     },
     {

@@ -3,6 +3,25 @@
 # Concatenate EXTRA_OPTS string
 [[ -n "$CHECKPOINT_SYNC_URL" ]] && EXTRA_OPTS="${EXTRA_OPTS} --checkpointSyncUrl=${CHECKPOINT_SYNC_URL}"
 
+case $_DAPPNODE_GLOBAL_EXECUTION_CLIENT_MAINNET in
+"geth.dnp.dappnode.eth")
+    HTTP_ENGINE="http://geth.dappnode:8551"
+    ;;
+"nethermind.public.dappnode.eth")
+    HTTP_ENGINE="http://nethermind.public.dappnode:8551"
+    ;;
+"erigon.dnp.dappnode.eth")
+    HTTP_ENGINE="http://erigon.dappnode:8551"
+    ;;
+"besu.public.dappnode.eth")
+    HTTP_ENGINE="http://besu.public.dappnode:8551"
+    ;;
+*)
+    echo "Unknown value for _DAPPNODE_GLOBAL_EXECUTION_CLIENT_MAINNET: $_DAPPNODE_GLOBAL_EXECUTION_CLIENT_MAINNET"
+    HTTP_ENGINE=$_DAPPNODE_GLOBAL_EXECUTION_CLIENT_MAINNET
+    ;;
+esac
+
 # MEV-Boost: https://chainsafe.github.io/lodestar/usage/mev-integration/
 if [ -n "$_DAPPNODE_GLOBAL_MEVBOOST_MAINNET" ] && [ "$_DAPPNODE_GLOBAL_MEVBOOST_MAINNET" == "true" ]; then
     echo "MEV-Boost is enabled"
