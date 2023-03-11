@@ -4,6 +4,7 @@
   "upstreamVersion": "v1.5.0",
   "architectures": ["linux/amd64", "linux/arm64"],
   "upstreamRepo": "ChainSafe/lodestar",
+  "upstreamArg": "UPSTREAM_VERSION",
   "shortDescription": "Typescript Ethereum Consensus Layer Implementation by ChainSafe",
   "description": "Typescript Ethereum Consensus Layer Implementation by ChainSafe",
   "type": "service",
@@ -19,13 +20,13 @@
     "url": "https://github.com/dappnode/DAppNodePackage-Lodestar.git"
   },
   "bugs": {
-    "url": "https://github.com/dappnode/DAppNodePackage-Lodestar/Issues"
+    "url": "https://github.com/dappnode/DAppNodePackage-Lodestar/issues"
   },
   "links": {
     "ui": "http://ui.web3signer.dappnode?signer_url=http://web3signer.web3signer.dappnode:9000",
-    "homepage": "https://github.com/dappnode/DAppNodePackage-lodestar#readme",
-    "readme": "https://github.com/ChainSafe/lodestar#lodestar-ethereum-consensus-implementation",
-    "docs": "https://chainsafe.github.io/lodestar/"
+    "homepage": "https://lodestar.chainsafe.io/",
+    "docs": "https://chainsafe.github.io/lodestar/",
+    "readme": "https://github.com/ChainSafe/lodestar/blob/stable/README.md"
   },
   "license": "LGPL-3.0",
   "chain": {
