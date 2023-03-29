@@ -23,7 +23,7 @@
     "url": "https://github.com/dappnode/DAppNodePackage-Lodestar/issues"
   },
   "links": {
-    "ui": "http://ui.web3signer.dappnode?signer_url=http://web3signer.web3signer.dappnode:9000",
+    "ui": "http://brain.web3signer.dappnode",
     "homepage": "https://lodestar.chainsafe.io/",
     "docs": "https://chainsafe.github.io/lodestar/",
     "readme": "https://github.com/ChainSafe/lodestar/blob/stable/README.md"
