@@ -34,7 +34,7 @@ if [ -n "$_DAPPNODE_GLOBAL_MEVBOOST_MAINNET" ] && [ "$_DAPPNODE_GLOBAL_MEVBOOST_
     fi
 fi
 
-exec node /usr/app/node_modules/.bin/lodestar \
+exec node --max-old-space-size=${MEMORY_LIMIT} /usr/app/node_modules/.bin/lodestar \
     beacon \
     --network=mainnet \
     --suggestedFeeRecipient=${FEE_RECIPIENT_ADDRESS} \
