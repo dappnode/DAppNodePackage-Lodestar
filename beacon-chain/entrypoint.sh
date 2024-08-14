@@ -23,7 +23,7 @@ case $_DAPPNODE_GLOBAL_EXECUTION_CLIENT_MAINNET in
 esac
 
 # MEV-Boost: https://chainsafe.github.io/lodestar/usage/mev-integration/
-if [ -n "$_DAPPNODE_GLOBAL_MEVBOOST_MAINNET" ] && [ "$_DAPPNODE_GLOBAL_MEVBOOST_MAINNET" == "true" ]; then
+if [ -n "$_DAPPNODE_GLOBAL_MEVBOOST_MAINNET" ] && [ "$_DAPPNODE_GLOBAL_MEVBOOST_MAINNET" = "true" ]; then
     echo "MEV-Boost is enabled"
     MEVBOOST_URL="http://mev-boost.mev-boost.dappnode:18550"
     if curl --retry 5 --retry-delay 5 --retry-all-errors "${MEVBOOST_URL}"; then
